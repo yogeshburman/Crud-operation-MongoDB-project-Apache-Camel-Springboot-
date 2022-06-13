@@ -1,0 +1,13 @@
+==============  Vm File ==========================
+================Message===========================
+
+Hello How are you ${headers.name} 
+
+Unix Time is =======> ${headers.unixTime}
+#set ( $date = ${headers.velocityContext.date})
+#set ( $math = ${headers.velocityContext.math})
+#set($unixYogesh = $date.format("dd-MM-yyyy HH:mm:ss a zzz" ,$date.toDate($math.toDouble(${headers.unixTime}))))
+
+Converted time is  ============> $unixYogesh
+
+===================================================
